@@ -8,6 +8,7 @@ gem 'rspec-sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'rake'
+gem 'bcrypt'
 
 group :test do
   gem 'rspec'
