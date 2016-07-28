@@ -5,11 +5,15 @@ require_relative 'models/link'
 
 class BookmarkManager < Sinatra::Base
 
-enable :session
+enable :sessions
 set :session_secret, 'super secret'
 
 get '/' do
   erb :'users/new'
+end
+
+get '/home' do
+  erb :'links/home'
 end
 
 get '/links' do

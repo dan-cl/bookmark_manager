@@ -1,3 +1,5 @@
+
+
 <h1> Links </h1>
 
 <form action="/links/new">
@@ -9,10 +11,14 @@
     <li>
       Title:  <%= link.title %>
       URL:    <%= link.url %>
+      Tags:   <%= link.tags.map(&:tag).join(", ") %>
     </li>
   <% end %>
 </ul>
 
+<form action="/links">
+  <input type="submit" value="Clear filters">
+</form>
 
 <form action="/tags" method = "get">
   <label for = "tag">
